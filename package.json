@@ -1,0 +1,19 @@
+{
+  "name": "carrito-de-compras",
+  "version": "1.0.0",
+  "description": "Carrito de compras de Mercado a Distancia",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "Axel Félix",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.5.5",
+    "jquery": "^3.6.0",
+    "lite-server": "^2.6.1",
+    "systemjs": "^0.19.41"
+  }
+}

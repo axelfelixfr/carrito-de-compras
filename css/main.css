@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Domine";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/Domine-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Dosis-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 350;
+  src: url("../fonts/Rubik.ttf");
+}
+
+body {
+  font-family: "Domine", sans-serif;
+}
+
+footer {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+header {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+
+header img {
+  background-position: center;
+  background-size: cover;
+}
+
+/* -------------------------------------------- */
+/* 	Para el efecto lightbox 		*/
+/* -------------------------------------------- */
+.imagen-modal {
+  width: 90%;
+  max-width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+  /* Con el "+" estoy seleccionando la hermana de la etiqueta con clase "imagen-modal" */
+}
+
+.imagen-modal + i {
+  position: absolute;
+  top: 3%;
+  right: 1%;
+  color: #303133;
+  font-size: 2.55rem;
+  background: #fff;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.portada {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portada .colum-p {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portada .colum-p .foto {
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+.portada .colum-p .foto.izq {
+  background-image: url("../img/lightbox/carnes_c.jpg");
+  background-position: left;
+}
+
+.portada .colum-p .foto.der {
+  background-image: url("../img/lightbox/frutas_c.jpg");
+  opacity: 0.8;
+}
+
+.portada .colum-p .foto .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 22, 24, 0.4);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portada .colum-p .foto .overlay:hover {
+  opacity: 1;
+}
+
+.portada .colum-p .foto .overlay i {
+  /* Con estas propiedades el icono del "+" estará centrado en las imagenes */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5625rem;
+}
+
+.portada .colum-p .texto {
+  width: 50%;
+  padding: 3.375rem;
+}
+
+.portada .colum-p .texto h2 {
+  font-size: 1.8125rem;
+  font-weight: 400;
+  line-height: 2.6875rem;
+  margin-bottom: 1.125rem;
+}
+
+.portada .colum-p .texto p {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.portada .colum-p .foto-full {
+  width: 100%;
+  min-height: 15.25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.portada .colum-p .foto-full.izq {
+  background-image: url("../img/lightbox/pan_c.jpg");
+  opacity: 0.8;
+}
+
+.portada .colum-p .foto-full.der {
+  background-image: url("../img/lightbox/pollo_c.jpg");
+}
+
+.portada .colum-p .foto-full .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 22, 24, 0.4);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portada .colum-p .foto-full .overlay:hover {
+  opacity: 1;
+}
+
+.portada .colum-p .foto-full .overlay i {
+  /* Con estas propiedades el icono del "+" estará centrado en las imagenes */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5625rem;
+}
+
+#lightbox_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0px;
+  left: 0px;
+}
+
+.barra-nav {
+  font-family: "Dosis", sans-serif;
+  font-size: 17px;
+}
+
+.barra-categ {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+
+.title-mercado {
+  font-family: "Dosis";
+  color: #343a40;
+}
+
+.formulario-side {
+  font-family: "Nunito";
+  font-size: 14px;
+}
+
+.form-group {
+  font-family: "Rubik";
+  font-size: 14px;
+}
+
+#correoElectronico, #password {
+  font-size: 0.9rem;
+}
+
+.boton-carrito {
+  font-family: "Rubik";
+  font-size: 14px;
+}
+
+.form-group-search {
+  font-family: "Rubik";
+  font-size: 16px;
+}
+
+.boton-domine {
+  font-family: "Domine", sans-serif;
+}
+
+.titulo-producto {
+  font-family: "Domine", sans-serif;
+}
+
+.descripcion {
+  font-family: "Domine", sans-serif;
+}
+
+thead {
+  font-family: "Domine", sans-serif;
+  font-size: 14px;
+}
+
+tbody {
+  font-family: "Rubik";
+  font-size: 17px;
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/* --------------------------------------------- */
+/*      Media Queries           */
+/* --------------------------------------------- */
+@media all and (max-width: 1500px) {
+  .main .portada .colum-p .texto {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+  
+}
+
+@media all and (max-width: 1199px) {
+  .main .portada .colum-p .foto {
+    display: none;
+  }
+
+  .main .portada .colum-p .texto {
+    width: 100%;
+  }
+
+}
+
+@media all and (max-width: 800px) {
+  .main .portada .colum-p {
+    width: 100%;
+  }
+
+  .main .portada .colum-p .foto-full.izq {
+    display: none;
+  }
+
+  .main .portada .colum-p .texto h2 {
+    text-align: center;
+  }
+
+  .main .portada .colum-p .texto p {
+    text-align: justify;
+  }
+
+}
